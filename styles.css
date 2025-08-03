@@ -1,0 +1,230 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%)
+}
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    vertical-align: middle;
+ }
+ nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 30px; /* this already shifts everything inward */
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%)
+    
+}
+#navigate {
+    margin-left: auto; /* pushes the div to the far right */
+    display: flex;
+    gap: 40px; /* adds space between links */
+    font-size: large;
+}
+nav a {
+    text-decoration: none;
+    color: #0078D4;
+    font-weight: bold;
+}
+nav a i {
+    margin-right: 6px;  /* adjust value for more/less space */
+}
+.hero {
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 150px 0px 80px;
+    color: white;
+    gap: 40px;
+    
+}
+.hero-text {
+    
+    padding-left: 20px;
+
+}
+h1{
+    color: #008AAA;
+    font-size: 40x;
+    font-weight: lighter;
+}
+#text1 {
+    color: #D1884F;
+    font-size: 60px;
+    margin-top: 90px;    /* Adjusted top spacing */
+    margin-bottom: 20px;
+}
+.card1 {
+    margin-left: 80px;
+    padding-left: 20px;
+}
+.card2 {
+    margin-left: 80px;
+    padding: 60px 0px 150px 20px;
+}
+#text2 {
+    max-width: 600px;     /* limit the width */
+    
+    line-height: 1.6;     /* better spacing between lines */
+    color: black;
+    font-size: 20px;
+  }
+
+  .project-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    color: white;                     /* button text color */
+    background: #008AAA;              /* solid button color */
+    border: none;                     /* removes borders */
+    border-radius: 6px;               /* rounded corners */
+    text-decoration: none;            /* removes underline */
+    cursor: pointer;                  /* pointer on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  /* shadow under button */
+    transition: all 0.3s ease;        /* smooth animation */
+  }
+  
+  .project-btn:hover {
+    background: #006f87;              /* slightly darker on hover */
+    transform: translateY(-2px);      /* moves up a little */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4); /* stronger shadow */
+  }
+  
+  /* this is the profile photo section */
+
+  .profile-container {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+  }
+  
+  .profile-container::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    width: calc(100% - 5px); /* slightly smaller than image */
+    height: calc(100% - 5px);
+    background-color: #9ee5f7;
+    border-bottom-left-radius: 80px;
+    z-index: 0;
+}
+
+  
+  .profile-img {
+    position: relative;
+    width: 300px;
+    height: auto;
+    border-bottom-left-radius: 80px; /* same radius */
+    object-fit: cover;
+    z-index: 1;
+  }
+
+   /* now the footer area css below */
+
+
+   hr {
+    width: 90%;              /* makes the line shorter */
+    margin: 40px auto;       /* centers it horizontally */
+    border: 2px solid #ccc;  /* line color */
+    opacity: 0.5;            /* slight fade effect */
+}
+
+   .contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 80px;
+    gap: 50px;
+}
+
+.contact-left {
+    flex: 1;
+}
+
+.contact-left h2 {
+    color: #008AAA;
+    margin-bottom: 10px;
+}
+
+.contact-left p {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 20px;
+    max-width: 500px; 
+}
+
+.social-icons a {
+    margin-right: 15px;
+    font-size: 24px;
+    color: #0078D4;
+}
+
+.contact-right {
+    flex: 1;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f5f5f5;
+}
+
+form button {
+    background: #008AAA;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+form button:hover {
+    background: #006f87;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* just to check responsive of this website in otehr devicdes, gonna use bootsrap and css grid later */
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #navigate {
+        margin-left: 0;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .profile-container {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    #text1 {
+        font-size: 40px;
+    }
+
+    .project-btn {
+        padding: 10px 18px;
+        font-size: 1rem;
+    }
+}
